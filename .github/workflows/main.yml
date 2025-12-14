@@ -22,7 +22,7 @@ jobs:
         run: npm ci
 
       - name: Run unit and integration tests
-        run: node --experimental-vm-modules node_modules/jest/bin/jest.js --ci --coverage
+        run: node --experimental-vm-modules node_modules/jest/bin/jest.js --config=jest.config.mjs --ci --coverage
 
   deploy:
     needs: build-and-test
