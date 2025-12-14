@@ -22,6 +22,12 @@ jobs:
       - name: Install dependencies
         run: npm ci
 
+      - name: Show installed jest jsdom env
+        run: npm ls jest-environment-jsdom || true
+
+      - name: Verify module can be required
+        run: node -e "require('jest-environment-jsdom'); console.log('jsdom env ok')"
+
       - name: Run tests
         run: npm test -- --watch=false
 
