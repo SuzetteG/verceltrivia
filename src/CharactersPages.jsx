@@ -1,8 +1,7 @@
-// src/pages/CharactersPage.jsx  (or whatever the actual path is)
 // ...existing code...
 import { Card, Col, Container, Row } from "react-bootstrap";
 import { Link } from "react-router-dom";
-import { useCharacters } from "../hooks/useCharacters"; // adjust path if needed
+import { useCharacters } from "../hooks/useCharacters";
 
 export default function CharactersPage() {
   const { error, data, loading } = useCharacters();
@@ -12,7 +11,7 @@ export default function CharactersPage() {
 
   return (
     <Container>
-      <h1>Characters page, WON&apos;T deploy because tests fail</h1>
+      <h1>Characters page, SUCCESSFUL deploy</h1>
       <Row>
         {data.characters.results.map((character) => (
           <Col key={character.id}>

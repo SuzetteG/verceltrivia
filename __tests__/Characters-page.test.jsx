@@ -1,13 +1,13 @@
-import React from "react";
+/* eslint-env jest */
 import { render, screen } from "@testing-library/react";
-import CharactersPage from "../pages/CharactersPage"; // update the path if needed
+import CharactersPage from "../pages/CharactersPage";
 
-describe("CharactersPage (negative test)", () => {
-  it("fails on purpose so deploy is blocked", () => {
+describe("CharactersPage (positive test)", () => {
+  it("shows the successful deploy heading", () => {
     render(<CharactersPage />);
-    // This will FAIL because that exact text does not exist
+    // Now this text DOES exist, so the test will PASS
     expect(
-      screen.getByText("THIS TEXT DOES NOT EXIST ANYWHERE")
+      screen.getByText("Characters page, SUCCESSFUL deploy")
     ).toBeInTheDocument();
   });
 });
