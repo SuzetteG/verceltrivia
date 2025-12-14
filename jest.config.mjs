@@ -1,6 +1,6 @@
 // type: module
 export default {
-  testEnvironment: 'jest-environment-jsdom',
+  testEnvironment: 'jsdom',
   setupFilesAfterEnv: ['@testing-library/jest-dom'],
   moduleFileExtensions: ['js', 'jsx'],
   transform: {
