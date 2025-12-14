@@ -20,13 +20,13 @@ jobs:
           cache: "npm"
 
 
+
       - name: Install dependencies
         run: npm ci
 
-      - name: Debug jsdom install
+      - name: Debug jsdom env
         run: |
           npm ls jest-environment-jsdom || true
-          ls -la node_modules/jest-environment-jsdom || true
           node -e "require('jest-environment-jsdom'); console.log('jsdom env ok')"
 
       - name: Run tests
@@ -45,6 +45,7 @@ jobs:
         with:
           node-version: 20
           cache: "npm"
+
 
       - name: Install dependencies
         run: npm ci
