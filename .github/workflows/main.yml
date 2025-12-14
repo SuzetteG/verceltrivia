@@ -23,11 +23,10 @@ jobs:
       - name: Install dependencies
         run: npm ci
 
-      - name: Debug jsdom env presence
+      - name: Debug jsdom install
         run: |
-          node -v
-          npm -v
           npm ls jest-environment-jsdom || true
+          ls -la node_modules/jest-environment-jsdom || true
           node -e "require('jest-environment-jsdom'); console.log('jsdom env ok')"
 
       - name: Run tests
